@@ -1,0 +1,522 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #F3F0ED;
+    --darkblue-color: #141730;
+    --dark-red: #C1001F;
+    --grey-color: #BBBABE;
+}
+.about{
+    margin-top: 100px;
+}
+.about .head{
+    text-align: center;
+    color: #C1001F;
+    padding: 20px 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Alatsi&display=swap");
+
+.about .head svg {
+	font-family: "Alatsi", sans-serif;
+	width: 100%;
+    height: 100%;
+}
+.about .head svg text {
+	animation: stroke 5s infinite alternate;
+	stroke-width: 2;
+	stroke: #C1001F;
+    font-size: clamp(2.5rem, 0rem + 8vw, 4.5rem);
+}
+@keyframes stroke {
+	0%   {
+		fill: rgba(193,0,31,0); stroke: rgba(193,0,31,1);
+		stroke-dashoffset: 25%; stroke-dasharray: 0 50%; stroke-width: 2;
+	}
+	70%  {fill: rgba(193,0,31,0); stroke: rgba(193,0,31,1); }
+	80%  {fill: rgba(193,0,31,0); stroke: rgba(193,0,31,1); stroke-width: 3; }
+	100% {
+		fill: rgba(193,0,31,1); stroke: rgba(193,0,31,0);
+		stroke-dashoffset: -25%; stroke-dasharray: 50% 0; stroke-width: 0;
+	}
+}
+
+
+
+.about .head p{
+    color: var(--darkblue-color);
+    font-weight: bold;
+}
+.about .head p a{
+    color: #C1001F;
+    text-decoration: none;
+}
+
+.about .container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height:auto;
+
+
+}
+.about .container1 #enablePlayback{
+    width: 290px;
+    margin-top: 10px;
+}
+
+.about .container1 .box1 {
+    position: relative;
+    width: 60%;
+    height: 60vh;
+    filter: grayscale(1);
+    border: 4px solid var(--darkblue-color);
+    margin: auto;
+}
+
+.about .container1 .box1:hover {
+    filter: grayscale(0);
+}
+
+.about .container1 .box1 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+
+.about .service {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .about .service .cards {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .about .service .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+
+  .about .service .card_image {
+    position: relative;
+    max-height: 250px;
+  }
+
+  .about .service .card_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about .service .card_price {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 0.25rem;
+    background-color: var(--dark-red);
+    color: var(--bg-color);
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  .about .service .card_price span {
+    font-size: 12px;
+    margin-top: -2px;
+  }
+
+
+
+  @media (min-width: 40rem) {
+    .about .service .cards_item {
+      width: 50%;
+    }
+  }
+
+  @media (min-width: 56rem) {
+    .about .service .cards_item {
+      width: 33.3333%;
+    }
+  }
+
+  .about .service .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .about .service .card_content {
+    position: relative;
+    padding: 16px 12px 32px 24px;
+    margin: 16px 8px 8px 0;
+    max-height: 290px;
+    overflow-y: scroll;
+  }
+
+  .about .service .card_content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .about .service .card_content::-webkit-scrollbar-track {
+    box-shadow: 0;
+    border-radius: 0;
+  }
+
+  .about .service .card_content::-webkit-scrollbar-thumb {
+    background: var(--dark-red);
+    border-radius: 15px;
+  }
+
+  .about .service .card_title {
+    position: relative;
+    margin: 0 0 24px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .about .service .card_title::after {
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--dark-red);
+    content: "";
+  }
+
+  hr {
+    margin: 24px auto;
+    width: 50px;
+    border-top: 2px solid var(--dark-red);
+  }
+
+  .about .service .card_text p {
+    margin: 0 0 24px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .about .service .card_text p:last-child {
+    margin: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.about .contact {
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--bg-color);
+}
+
+.about .contact .head {
+    max-width: 800px;
+    text-align: center;
+
+}
+
+.about .contact .head h2 {
+    font-size: 3em;
+    color: #C1001F;
+    font-weight: 300;
+}
+
+.about .contact .head p {
+    font-size: 1.1em;
+
+    font-weight: 500;
+}
+
+.about .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    background-color: var(--bg-color);
+    margin-top: 30px;
+}
+
+.about .container .contactinfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.about .container .contactinfo .box {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.about .container .contactinfo .box .icon {
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: repeating-conic-gradient(from 27.5deg,
+            var(--dark-red) 0%, var(--dark-red) 10%, transparent 10%, transparent 50%);
+}
+
+.about .container .contactinfo .box .icon::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from 117.5deg,
+            var(--dark-red) 0%, var(--dark-red) 10%, transparent 10%, transparent 50%);
+
+}
+
+.about .container .contactinfo .box .icon::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: var(--bg-color);
+}
+
+.about .container .contactinfo .box .icon b {
+    position: absolute;
+    inset: 8px;
+    background: var(--dark-red);
+    z-index: 2;
+}
+
+.about .container .contactinfo .box .icon i {
+    position: relative;
+    z-index: 1000;
+    color: var(--bg-color);
+    font-size: 1.25em;
+    left: 13px;
+    bottom: -10px;
+
+}
+
+.about .container .contactinfo .box .text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    font-size: 1.1em;
+    color: rgb(2, 18, 33);
+    font-weight: 300;
+}
+
+.about .container .contactinfo .box .text h3 {
+    font-weight: 500;
+    color: #C1001F;
+}
+
+.about .container .contactinfo .txt {
+    color: #C1001F;
+    margin-top: 50px;
+    font-weight: 500;
+    border-left: 50px solid var(--dark-red);
+    padding-left: 10px;
+    line-height: 1em;
+}
+
+.about .container .contactinfo .sci {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.about .container .contactinfo .sci i {
+    color: var(--darkblue-color);
+    font-size: 1.5em;
+    transition: 0.25s;
+}
+
+.about .container .contactinfo .sci i:hover {
+    color: var(--dark-red);
+    filter: drop-shadow(0 0 5px var(--dark-red));
+}
+
+.about .container .contactform {
+    position: relative;
+    width: 40%;
+    background: repeating-conic-gradient(from var(--a),
+            var(--dark-red) 0%, var(--dark-red) 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    padding: 60px;
+}
+
+.about .container .contactform::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a),
+            var(--dark-red) 0%, var(--dark-red) 10%, transparent 10%, transparent 50%);
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+
+.about .container .contactform::after {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border: 20px solid var(--bg-color);
+    background: var(--bg-color);
+}
+
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes animate {
+    0% {
+        --a: 0deg;
+    }
+
+    100% {
+        --a: 360deg;
+    }
+}
+
+.about .container .contactform form {
+    position: relative;
+    z-index: 10;
+}
+
+.about .container .contactform form h2 {
+    font-size: 2em;
+    color: #141730;
+    font-weight: 500;
+}
+
+.about .container .contactform form .inputbox {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.about .container .contactform form .inputbox input,
+.about .container .contactform form .inputbox textarea {
+    width: 100% !important;
+    padding: 5px 0;
+    font-size: 1.1em;
+    margin: 10px 0;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid var(--darkblue-color);
+    color: #141730;
+    outline: none;
+    resize: none;
+}
+
+.about .container .contactform form .inputbox span {
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    padding: 5px 0;
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #141730;
+    transition: .5s;
+
+}
+
+.about .container .contactform form .inputbox span,
+.about .container .contactform form .inputbox span,
+.about .container .contactform form .inputbox span,
+.about .container .contactform form .inputbox span {
+    color: var(--dark-red);
+    font-size: .9em;
+    transform: translateY(-24px);
+}
+
+.about .container .contactform form .inputbox input[type="submit"] {
+    width: 100%;
+    background: #C1001F;
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+@media (max-width:991px) {
+
+.about .container1 .box1 {
+    width: 100%;
+}
+    .about .contact {
+        padding: 50px;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .about .container .contactform,
+    .about .container .contactinfo {
+        width: 100%;
+    }
+
+    .about .container .contactform form {
+        padding: 10px;
+    }
+
+    .about .container .contactform {
+        padding: 40px;
+    }
+}
